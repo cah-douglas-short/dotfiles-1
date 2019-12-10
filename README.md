@@ -1,4 +1,4 @@
-# holman does dotfiles
+# dougie does dotfiles
 
 Your dotfiles are how you personalize your system. These are mine.
 
@@ -24,7 +24,7 @@ symlinked without extension into `$HOME` when you run `script/bootstrap`.
 
 A lot of stuff. Seriously, a lot of stuff. Check them out in the file browser
 above and see what components may mesh up with you.
-[Fork it](https://github.com/holman/dotfiles/fork), remove what you don't
+[Fork it](https://github.com/cah-douglas-short/dotfiles-1/fork), remove what you don't
 use, and build on what you do use.
 
 ## components
@@ -50,7 +50,7 @@ There's a few special files in the hierarchy.
 Run this:
 
 ```sh
-git clone https://github.com/holman/dotfiles.git ~/.dotfiles
+git clone https://github.com/cah-douglas-short/dotfiles-1.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```
