@@ -1,0 +1,34 @@
+#!/usr/local/bin/bash
+
+# check to see if git command line installed on this machine
+IS_GIT_AVAILABLE="$(git --version)"
+if [[ $IS_GIT_AVAILABLE == *"version"* ]]; then
+  echo "Git is Available"
+else
+  echo "Git is not installed"
+  exit 1
+fi
+
+# copy VS-Code files
+cp $HOME/Library/Application\
+Support/Code/User/{keybindings.json,settings.json,spellright.dict} .
+
+# copy list of VS-Code extensions currently installed
+code --list-extensions --show-versions >> $HOME/projects/Personal/vsextensions.txt
+
+# copy other dot files
+#cp $HOME/{.bash_profile,.bashrc,.fzf.bash,.fzf.zsh,.gitattributes,.gitconfig,.p10k.zsh,.python_history,.vimrc,.zshrc} $HOME/projects/Personal/my_env/dots/.
+
+# Check git status
+gs="$(git status | grep -i "modified")"
+# echo "${gs}"
+
+# Check if there is anything changed
+if [[ $gs == *"modified"* ]]; then
+  echo "push"
+fi
+
+# Push to Github
+git add -u;
+git commit -m "New backup `date +'%y-%m-%d -H:%M:%S'`";
+git push origin master
