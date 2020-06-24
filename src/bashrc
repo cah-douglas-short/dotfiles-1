@@ -1,3 +1,1 @@
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-# Adding pipenv to path
-export PATH="$PATH:/Users/douglas.short/.local/bin"
+scripts/bashrc
