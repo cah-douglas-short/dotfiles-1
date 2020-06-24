@@ -1,6 +1,7 @@
 git/gitconfig.local.symlink
 history/
 bash_*
+src/DS_Store
 src/SpaceVim/
 src/anaconda/
 src/ansible/
@@ -51,7 +52,9 @@ src/vimrc.dshort.keep/
 src/vimrc_back/
 src/vs-kubernetes/
 src/vscode/
-src/z
+src/z/
 src/zcompdump-LOH085W55QNHTD6-5.7.1
 src/zsh_history
 src/zshrc.backup/
+src/z
+src/scripts/DS_Store
